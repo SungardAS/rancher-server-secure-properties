@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+script:
+  - docker build -t rancher-server-secure-properties .
+  - docker run -it --rm -v $PWD:/host  rancher-server-secure-properties ci
+
+
