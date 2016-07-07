@@ -8,6 +8,8 @@ script:
 before_deploy:
   - ls -al
   - ls -al $PWD/artifacts
+  - sudo chown travis artifacts
+  - sudo chown travis artifacts/rancher-server-secure-properties
 deploy:
   skip_cleanup: true
   provider: releases
