@@ -10,7 +10,7 @@ deploy:
   provider: releases
   api_key:
     secure: RAo0VmG8BXwEd1uuZIg8w/u3Cho/8K32oc73k4vAan29zpQ1xkEfOVfb11hZ37Zh/XqXEn2dUSB+d1liB8y5jK/uO1P/WTeNsHxTIUVcy0+XfMe0fo85B7OBM4mMPBB/99fQSRNh+Z2kC49TmnGhIns35JjAROh0P8LttQGN7JhQo0ZJFHfPDMhKKuigMFmWNBkuKT4xFOm/l+oBmzgf1cKgP6KYJvzDQeldk2Cqsrz9+5jIFEVZ/mS0HyXOqD8f3IXh7MDKgVwt7NVePfNP1a3IR0GxCERFXd6bfRx3lTfLdpjtDlqN2alXxCZCrxxWFrHrdgzpJrzpDhlnzG8LMMr+9rZK4EJ13uboG12HsTA+kvTAm4zsy0gB7iau8BvfBLGqOCVxV/shNOx7ldHcCklytgF5KbBnXAXUOkRT8GD5AYJ/jZbZ6pk47gcMXiCBeiCfXJ0CUmIz3c2vQ7LV2u+nWIlxj0exadO18EeaOGG9UcpWwY6KZgmPE5DEe0ckIKmNRalOYYOvIfHIL68Ndfm8mS9T+lCIEySG9dx9aAKx8sfQzbZQquUoi51vga1AEb42/QmVJXuqxvYnGeU+VM+Tu3DWUHss1+Ux87tMZYPPY8lx4qyVHAexWwC0tVskVagnGk7YugtF1y6Szdz/hj72Sc+HzVLYkWhh9dSXkaI=
-  file: $PWD/artifacts/rancher-server-secure-properties
+  file: artifacts/rancher-server-secure-properties
   on:
     repo: SungardAS/rancher-server-secure-properties
     tags: true
