@@ -4,7 +4,7 @@ services:
 script:
 - docker build -t rancher-server-secure-properties .
 - docker run -it --rm -v $PWD:/host  rancher-server-secure-properties ci
-- ls -al /artifacts
+- ls -al $PWD/artifacts
 deploy:
   provider: releases
   api_key:
