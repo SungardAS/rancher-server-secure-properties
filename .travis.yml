@@ -16,4 +16,3 @@ deploy:
   file: artifacts/rancher-server-secure-properties
   on:
     repo: SungardAS/rancher-server-secure-properties
-    tags: true
