@@ -5,6 +5,9 @@ script:
 - docker build -t rancher-server-secure-properties .
 - docker run -it --rm -v $PWD:/host  rancher-server-secure-properties ci
 - ls -al $PWD/artifacts
+before_deploy:
+  - ls -al
+  - ls -al $PWD/artifacts
 deploy:
   skip_cleanup: true
   provider: releases
