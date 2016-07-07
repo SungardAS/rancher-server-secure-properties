@@ -52,4 +52,3 @@ func (c *Client) Decrypt(ciphertext string) (string, error) {
 	return string(resp.Plaintext), err
 }
 
-

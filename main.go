@@ -3,7 +3,6 @@ package main
 import (
   "os"
   "strings"
-  "fmt"
 
 	"github.com/SungardAS/rancher-server-secure-properties/backends"
 )
@@ -19,16 +18,25 @@ func main() {
 		return
 	}
 
+	os.MkdirAll("/usr/share/cattle/war",755)
+	f, ferr := os.Create("/usr/share/cattle/war/cattle-local.properties")
+	var _ = ferr
+
 	for _, e := range os.Environ() {
 		pair := strings.SplitN(e, "=",2)
 		if strings.HasPrefix(pair[0],"CATTLE") {
-			fmt.Println(pair[0])
 			plaintext, err := decryptClient.Decrypt(pair[1]);
 			if err != nil {
 				panic(err)
 			}
 
-			fmt.Println(plaintext)
+			propertyName := strings.Replace(strings.Replace(pair[0],"CATTLE_","",1),"_",".",-1)
+			propertyName = strings.ToLower(propertyName)
+
+			f.WriteString(propertyName)
+			f.WriteString("=")
+			f.WriteString(plaintext)
+			f.WriteString("\n")
 
 		}
 	}
