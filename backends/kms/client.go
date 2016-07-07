@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/ec2metadata"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kms"
 )
@@ -13,7 +14,23 @@ type Client struct {
 }
 
 func New() (*Client, error) {
-	svc := kms.New(session.New(), &aws.Config{Region: aws.String("us-east-1")})
+
+	s := session.New()
+	region := *s.Config.Region
+
+	metaSvc := ec2metadata.New(s)
+
+	if len(region) < 1 {
+		if metaSvc.Available() {
+			r, err := metaSvc.Region()
+			var _ = err
+			region = r
+		} else {
+			region = "us-east-1"
+		}
+	}
+
+	svc := kms.New(s, &aws.Config{Region: aws.String(region)})
 
   client := &Client{
 		svc: svc,
@@ -31,11 +48,8 @@ func (c *Client) Decrypt(ciphertext string) (string, error) {
 	}
 
 	resp, err := c.svc.Decrypt(decryptInput)
-	if err != nil {
-		panic(err)
-  }
 
-	return string(resp.Plaintext), nil
+	return string(resp.Plaintext), err
 }
 
 
