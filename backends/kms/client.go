@@ -1,7 +1,7 @@
 package kms
 
 import (
-	"fmt"
+	"encoding/base64"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -13,7 +13,7 @@ type Client struct {
 }
 
 func New() (*Client, error) {
-	svc := kms.New(session.New(), &aws.Config{Region: aws.String("us-west-2")})
+	svc := kms.New(session.New(), &aws.Config{Region: aws.String("us-east-1")})
 
   client := &Client{
 		svc: svc,
@@ -23,9 +23,19 @@ func New() (*Client, error) {
 }
 
 func (c *Client) Decrypt(ciphertext string) (string, error) {
-	fmt.Printf("Hello, KMS.\n")
-	c.svc.Decrypt(nil)
-	return "", nil
+
+	data, err := base64.StdEncoding.DecodeString(ciphertext)
+
+	decryptInput := &kms.DecryptInput{
+    CiphertextBlob: data,
+	}
+
+	resp, err := c.svc.Decrypt(decryptInput)
+	if err != nil {
+		panic(err)
+  }
+
+	return string(resp.Plaintext), nil
 }
 
 

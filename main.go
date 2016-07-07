@@ -20,10 +20,16 @@ func main() {
 	}
 
 	for _, e := range os.Environ() {
-		pair := strings.Split(e, "=")
+		pair := strings.SplitN(e, "=",2)
 		if strings.HasPrefix(pair[0],"CATTLE") {
 			fmt.Println(pair[0])
-	    decryptClient.Decrypt("asdf");
+			plaintext, err := decryptClient.Decrypt(pair[1]);
+			if err != nil {
+				panic(err)
+			}
+
+			fmt.Println(plaintext)
+
 		}
 	}
 

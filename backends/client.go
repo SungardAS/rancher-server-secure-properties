@@ -1,7 +1,6 @@
 package backends
 
 import (
-	"fmt"
 	"errors"
 
 	"github.com/SungardAS/rancher-server-secure-properties/backends/kms"
@@ -12,7 +11,6 @@ type DecryptClient interface {
 }
 
 func New(config Config) (DecryptClient, error) {
-	fmt.Printf("Hello, world.\n")
 
 	switch config.Backend {
 	case "kms":
