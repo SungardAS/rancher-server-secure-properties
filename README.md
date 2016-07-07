@@ -4,6 +4,9 @@
 
 Create `cattle-local.properties` from encrypted envrionment variables
 
+This project is **ALPHA** status.  It could change or be removed at
+anytime.
+
 ## Sungard Availability Services | Labs
 [![Sungard Availability Services | Labs][labs-logo]][labs-github-url]
 
