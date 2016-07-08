@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mkdir -p /host/artifacts
-cp /go/bin/rancher-server-secure-properties /host/artifacts
+mkdir -p /host/build
+cp /go/bin/rancher-server-secure-properties /host/build

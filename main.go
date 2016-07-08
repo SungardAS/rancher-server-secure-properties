@@ -24,13 +24,13 @@ func main() {
 
 	for _, e := range os.Environ() {
 		pair := strings.SplitN(e, "=",2)
-		if strings.HasPrefix(pair[0],"CATTLE") {
+		if strings.HasPrefix(pair[0],"ENC_CATTLE") {
 			plaintext, err := decryptClient.Decrypt(pair[1]);
 			if err != nil {
 				panic(err)
 			}
 
-			propertyName := strings.Replace(strings.Replace(pair[0],"CATTLE_","",1),"_",".",-1)
+			propertyName := strings.Replace(strings.Replace(pair[0],"ENC_CATTLE_","",1),"_",".",-1)
 			propertyName = strings.ToLower(propertyName)
 
 			f.WriteString(propertyName)
