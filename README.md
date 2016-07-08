@@ -26,10 +26,7 @@ be passed in through the envrionment or ec2 instance profile.
 
 Run `rancher-server` with the following command:
 
-    sh -c 'curl -sOL
-https://github.com/SungardAS/rancher-server-secure-properties/releases/download/0.1.0-alpha.4/rancher-server-secure-properties;
-chmod 755 rancher-server-secure-properties;
-./rancher-server-secure-properties; /service/cattle/run'
+    sh -c 'curl -sOL https://github.com/SungardAS/rancher-server-secure-properties/releases/download/0.1.0-alpha.4/rancher-server-secure-properties;chmod 755 rancher-server-secure-properties;./rancher-server-secure-properties;/service/cattle/run'
 
 Now instead of declaring `CATTLE_DB_CATTLE_MYSQL_PASSWORD` use
 `ENC_CATTLE_DB_CATTLE_MYSQL_PASSWORD` and set the value as the base64
