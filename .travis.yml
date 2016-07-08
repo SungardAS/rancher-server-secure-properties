@@ -16,3 +16,4 @@ deploy:
   file: build/rancher-server-secure-properties
   on:
     repo: SungardAS/rancher-server-secure-properties
+    tags: true
