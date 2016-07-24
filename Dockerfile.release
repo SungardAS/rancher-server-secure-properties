@@ -1,4 +1,0 @@
-FROM ubuntu:14.04.4
-
-ADD build/rancher-server-secure-properties /usr/local/bin
-

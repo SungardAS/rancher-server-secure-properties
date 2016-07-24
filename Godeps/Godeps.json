@@ -1,0 +1,117 @@
+{
+	"ImportPath": "github.com/SungardAS/rancher-server-secure-properties",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/awserr",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/awsutil",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/client",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/client/metadata",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/corehandlers",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/credentials",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/credentials/endpointcreds",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/defaults",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/ec2metadata",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/request",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/session",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/aws/signer/v4",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/private/endpoints",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/private/protocol",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/private/protocol/json/jsonutil",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/private/protocol/jsonrpc",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/private/protocol/rest",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/aws/aws-sdk-go/service/kms",
+			"Comment": "v1.2.7-2-g5fbcfa0",
+			"Rev": "5fbcfa00ec930ccaa641b404adece72bf96e3667"
+		},
+		{
+			"ImportPath": "github.com/go-ini/ini",
+			"Comment": "v1.18.0",
+			"Rev": "cf53f9204df4fbdd7ec4164b57fa6184ba168292"
+		},
+		{
+			"ImportPath": "github.com/jmespath/go-jmespath",
+			"Comment": "0.2.2-12-g0b12d6b",
+			"Rev": "0b12d6b521d83fc7f755e7cfc1b1fbdd35a01a74"
+		}
+	]
+}
